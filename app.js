@@ -22,10 +22,32 @@ function agregarAmigo(){
         amigoHTML.innerHTML = nuevonombre;
         console.log(amigos);
         console.log(typeof(amigos));
-        return;
+        limpiarCaja();
     }
+    return;
 }
 
+function indicealeatorio(){
+
+    let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
+    if (amigos.includes(nombresorteado)){
+
+
+    }else{
+        return nombresorteado;        
+    }
+
+}
+
+function sortearAmigo() {
+
+
+}
+
+function limpiarCaja(){
+    let lista = document.querySelector('#amigo');
+    lista.value = '';
+}
 
 asignarTextoElemento('h1','Amigo Secreto');
 asignarTextoElemento('h2','Digite el nombre de sus amigos');
