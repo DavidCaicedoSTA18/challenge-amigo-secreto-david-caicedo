@@ -18,14 +18,14 @@ function agregarAmigo(){
         alert("Por favor, inserte un nombre válido");
     } else {
         amigos.push(nuevonombre);
-        indicealeatorio();
         let amigoHTML = document.getElementById('resultado');
         amigoHTML.innerHTML = nuevonombre;
+        indicealeatorio();
         console.log(amigos);
         console.log(typeof(amigos));
         limpiarCaja();
     }
-    return;
+    //return;
 }
 
 function indicealeatorio(){
@@ -37,14 +37,12 @@ function indicealeatorio(){
         let listado = document.createElement('listado');
         listado.textContent = amigos[i];
         lista.appendChild(listado);
+        lista.innerHTML +=  "<br>";
     }
 
 }
 
-function sortearAmigo() {
-
-
-}
+//function sortearAmigo() {}
 
 function limpiarCaja(){
     let lista = document.querySelector('#amigo');
