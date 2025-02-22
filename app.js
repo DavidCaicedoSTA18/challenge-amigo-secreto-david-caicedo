@@ -3,7 +3,7 @@
 
 //"JuanPablo","Laura","Ethan","Alexa","Santiago"
 let amigos = [];
-console.log(amigos.length);
+//console.log(amigos.length);
 
 function asignarTextoElemento(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
@@ -18,6 +18,7 @@ function agregarAmigo(){
         alert("Por favor, inserte un nombre válido");
     } else {
         amigos.push(nuevonombre);
+        indicealeatorio();
         let amigoHTML = document.getElementById('resultado');
         amigoHTML.innerHTML = nuevonombre;
         console.log(amigos);
@@ -29,12 +30,13 @@ function agregarAmigo(){
 
 function indicealeatorio(){
 
-    let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
-    if (amigos.includes(nombresorteado)){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
 
-
-    }else{
-        return nombresorteado;        
+    for (let i = 0; i < amigos.length; i++) {
+        let listado = document.createElement('listado');
+        listado.textContent = amigos[i];
+        lista.appendChild(listado);
     }
 
 }
@@ -51,3 +53,18 @@ function limpiarCaja(){
 
 asignarTextoElemento('h1','Amigo Secreto');
 asignarTextoElemento('h2','Digite el nombre de sus amigos');
+
+
+
+//propuesta de la funcion indicealeatorio
+
+    //let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
+    //if (amigos.includes(nombresorteado)){
+    //    console.log(nombresorteado);
+    //    return indicealeatorio();
+    //}else{
+    //    amigos.push(nombresorteado);
+    //    return nombresorteado;        
+    //    console.log(nombresorteado);
+    //    console.log(typeof(nombresorteado));
+    //}
