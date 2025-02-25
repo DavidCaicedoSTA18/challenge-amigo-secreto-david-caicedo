@@ -18,11 +18,11 @@ function agregarAmigo(){
         alert("Por favor, inserte un nombre válido");
     } else {
         amigos.push(nuevonombre);
-        let amigoHTML = document.getElementById('resultado');
-        amigoHTML.innerHTML = nuevonombre;
+        //let amigoHTML = document.getElementById('resultado');
+        //amigoHTML.innerHTML = nuevonombre;
         indicealeatorio();
-        console.log(amigos);
-        console.log(typeof(amigos));
+        //console.log(amigos);
+        //console.log(typeof(amigos));
         limpiarCaja();
     }
     //return;
