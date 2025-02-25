@@ -39,10 +39,19 @@ function indicealeatorio(){
         lista.appendChild(listado);
         lista.innerHTML +=  "<br>";
     }
-
 }
 
-//function sortearAmigo() {}
+function sortearAmigo() {
+
+    let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
+    console.log(nombresorteado);
+    if (amigos.includes(nombresorteado)){
+        amigos.push(nombresorteado);
+        let amigoHTML = document.getElementById('resultado');
+        amigoHTML.innerHTML = `El amigo secreto sorteado es ${nombresorteado}`;
+        return;
+    }
+}
 
 function limpiarCaja(){
     let lista = document.querySelector('#amigo');
