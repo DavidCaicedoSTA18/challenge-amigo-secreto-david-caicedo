@@ -1,11 +1,14 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. 
+// El principal objetivo de este desafío es fortalecer tus habilidades 
+// en lógica de programación. 
 // Aquí deberás desarrollar la lógica para resolver el problema.
-
 //"JuanPablo","Laura","Ethan","Alexa","Santiago"
+
 let amigos = [];
+
 //console.log(amigos.length);
 
 function asignarTextoElemento(elemento, texto){
+
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
     return;
@@ -13,19 +16,19 @@ function asignarTextoElemento(elemento, texto){
 
 function agregarAmigo(){
 
+    let limpia = document.getElementById('resultado');
+    limpia.innerHTML = '';
+    
     let nuevonombre = document.getElementById('amigo').value;
     if (nuevonombre === "") { 
         alert("Por favor, inserte un nombre válido");
     } else {
         amigos.push(nuevonombre);
-        //let amigoHTML = document.getElementById('resultado');
-        //amigoHTML.innerHTML = nuevonombre;
-        indicealeatorio();
-        //console.log(amigos);
-        //console.log(typeof(amigos));
+        indicealeatorio()
+        console.log(amigos);
         limpiarCaja();
+        return
     }
-    //return;
 }
 
 function indicealeatorio(){
@@ -51,7 +54,8 @@ function sortearAmigo() {
         amigos.push(nombresorteado);
         let amigoHTML = document.getElementById('resultado');
         amigoHTML.innerHTML = `El amigo secreto sorteado es ${nombresorteado}`;
-        return;
+        CondicionesIniciales();
+        return nombresorteado;
     }
 }
 
@@ -60,12 +64,16 @@ function limpiarCaja(){
     lista.value = '';
 }
 
-asignarTextoElemento('h1','Amigo Secreto');
-asignarTextoElemento('h2','Digite el nombre de sus amigos');
+function CondicionesIniciales(){
+    asignarTextoElemento('h1','Amigo Secreto');
+    asignarTextoElemento('h2','Digite el nombre de sus amigos');
+    limpiarCaja();
+    amigos = [];
+}
 
+CondicionesIniciales();
 
-
-//propuesta de la funcion indicealeatorio
+//primera propuesta sin consultar biblioteca de la funcion indicealeatorio
 
     //let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
     //if (amigos.includes(nombresorteado)){
