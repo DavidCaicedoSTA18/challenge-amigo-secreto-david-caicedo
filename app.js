@@ -56,6 +56,10 @@ function sortearAmigo() {
         amigoHTML.innerHTML = `El amigo secreto sorteado es ${nombresorteado}`;
         CondicionesIniciales();
         return nombresorteado;
+    }else{
+        let refrescar = document.getElementById('resultado');
+        refrescar.innerHTML = '';
+        alert("Por favor, ingrese primero un nombre");
     }
 }
 
