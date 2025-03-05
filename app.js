@@ -76,16 +76,3 @@ function CondicionesIniciales(){
 }
 
 CondicionesIniciales();
-
-//primera propuesta sin consultar biblioteca de la funcion indicealeatorio
-
-    //let nombresorteado = amigos[Math.floor(Math.random()*amigos.length)];
-    //if (amigos.includes(nombresorteado)){
-    //    console.log(nombresorteado);
-    //    return indicealeatorio();
-    //}else{
-    //    amigos.push(nombresorteado);
-    //    return nombresorteado;        
-    //    console.log(nombresorteado);
-    //    console.log(typeof(nombresorteado));
-    //}
