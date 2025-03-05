@@ -13,7 +13,7 @@ Esta aplicación te permite hacer el sorteo del amigo secreto tanto de forma pre
 
 ## Features
 
-- **Agregar Nombre**: Los usuarios escribirán el nombre de un amigo en un campo de texto y lo agregarán a una lista visible al hacer clic en "Adicionar".
+- **Agregar Nombre**: Los usuarios escribirán el nombre de un amigo en un campo de texto y lo agregarán a una lista visible al hacer clic en "Añadir".
 - **Validar Entrada**: Si el campo de texto está vacío, el programa mostrará una alerta pidiendo un nombre válido.
 - **Visualizar la Lista**: Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
 - **Sorteo Aleatorio**: Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
@@ -32,6 +32,10 @@ La interfaz en la que pueden interactura y agregar amigos:
 El listado de amigos agregados:
 
 ![App Screenshot](assets/Screenshots/Lista.amigos.PNG)
+
+El resultado del amigo sorteado aparecera en unas letras verdes resaltadas.
+
+![App Screenshot](assets/Screenshots/amigo-sorteado.PNG)
 
 Si no agregan un nombre saldra la ventana de aviso:
 
